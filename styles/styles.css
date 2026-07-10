@@ -15,27 +15,41 @@ header {
   margin: 20px auto 10px auto;
 }
 
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  padding: 5px 10px;
+  display: block;
+  text-decoration: none;
+}
+
 h1 {
   font-size: 1rem;
   margin: 0;
   font-weight: normal;
+  color: #333;
 }
 
 main {
-  max-width: 450px; /* Note: The instruction asked for 840px, but keeping your 450px keeps your layout beautifully uniform! */
+  max-width: 450px;
   margin: 0 auto;
   background-color: #fff;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* --- Profile Image Style --- */
 main img {
   width: 150px;
   height: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- New Aside Section Style --- */
 aside {
   width: 20rem;
   margin: 1rem auto;
@@ -46,18 +60,15 @@ aside {
   text-align: center;
 }
 
-/* --- Aside Image Style --- */
 aside img {
   width: 200px;
   height: auto;
 }
 
-/* --- Global Paragraph Padding Reset --- */
 p {
   padding: 0;
 }
 
-/* --- Footer Style --- */
 footer {
   margin-top: 15px;
   border-top: 1px solid #000;
