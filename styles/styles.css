@@ -1,7 +1,12 @@
-body {
-  font-family: Arial, sans-serif;
+/* Universal Reset Selector */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   color: #333;
   text-align: center;
@@ -39,7 +44,6 @@ main {
   margin: 0 auto;
   background-color: #fff;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 main img {
@@ -48,29 +52,73 @@ main img {
   border: 1px solid #ccc;
   padding: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: right; /* Floats the profile image to the right side */
+  margin-left: 10px; /* Gives space between the floated image and text */
 }
 
+/* Updated aside utilizing relative positioning for heading overlay */
 aside {
   width: 20rem;
   margin: 1rem auto;
-  border: 1px solid rgb(0 0 0 / 0.2);
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
   text-align: center;
+  position: relative; /* Essential container context for absolute elements inside */
 }
 
 aside img {
   width: 200px;
   height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Absolute position to overlay the heading onto the image */
+aside h2 {
+  position: absolute;
+  top: 40px; 
+  left: 50%;
+  transform: translateX(-50%); /* Centers the text perfectly horizontally over the image */
+  background-color: rgba(0, 0, 0, 0.6); /* Adds a dark semi-transparent box for contrast */
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border-radius: 4px;
 }
 
 p {
-  padding: 0;
+  padding: 10px 0;
 }
 
 footer {
   margin-top: 15px;
   border-top: 1px solid #000;
   text-align: center;
+  padding-bottom: 15px;
+}
+
+/* Class Selectors */
+.box {
+  margin: 1rem auto;
+  border: 1px solid rgb(0 0 0 / 10%);
+  padding: 1rem;
+  background-color: #eeeeee; /* Light clean grey background */
+  color: #111111; /* Sharp charcoal text */
+}
+
+/* Style the list inside the box to look clean */
+ul.box {
+  list-style-type: none; /* Removes bullets */
+  text-align: left; /* Aligns links nicely */
+}
+
+ul.box li {
+  margin: 5px 0;
+}
+
+ul.box li a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+ul.box li a:hover {
+  text-decoration: underline;
 }
