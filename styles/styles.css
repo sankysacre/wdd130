@@ -1,124 +1,106 @@
-/* Universal Reset Selector */
+/* Universal Selector Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333;
 }
 
+/* Centered Page Wrapper Simulation */
+header, main, footer {
+    max-width: 640px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Header Navigation Styling */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  max-width: 450px;
-  margin: 20px auto 10px auto;
+    background-color: #333333;
+    text-align: center;
 }
 
-nav {
-  background-color: #333;
-  padding: 10px;
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 0;
 }
 
-nav a {
-  color: #fff;
-  padding: 5px 10px;
-  display: block;
-  text-decoration: none;
+header nav a:hover {
+    color: #0077b6;
 }
 
-h1 {
-  font-size: 1rem;
-  margin: 0;
-  font-weight: normal;
-  color: #333;
-}
-
-main {
-  max-width: 450px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
+/* Main Content Layout */
+main h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333333;
 }
 
 main img {
-  width: 150px;
-  height: auto;
-  border: 1px solid #ccc;
-  padding: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  float: right; /* Floats the profile image to the right side */
-  margin-left: 10px; /* Gives space between the floated image and text */
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Updated aside utilizing relative positioning for heading overlay */
-aside {
-  width: 20rem;
-  margin: 1rem auto;
-  text-align: center;
-  position: relative; /* Essential container context for absolute elements inside */
+main p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Lists and Aside Containers */
+.box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    list-style-position: inside;
+}
+
+.box li {
+    margin-bottom: 10px;
+}
+
+.box li a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.box li a:hover {
+    text-decoration: underline;
+}
+
+/* Aside Section Styles */
+aside h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 aside img {
-  width: 200px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Absolute position to overlay the heading onto the image */
-aside h2 {
-  position: absolute;
-  top: 40px; 
-  left: 50%;
-  transform: translateX(-50%); /* Centers the text perfectly horizontally over the image */
-  background-color: rgba(0, 0, 0, 0.6); /* Adds a dark semi-transparent box for contrast */
-  color: #fff;
-  padding: 5px 10px;
-  font-size: 1.2rem;
-  border-radius: 4px;
-}
-
-p {
-  padding: 10px 0;
-}
-
+/* Footer Section styling */
 footer {
-  margin-top: 15px;
-  border-top: 1px solid #000;
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-/* Class Selectors */
-.box {
-  margin: 1rem auto;
-  border: 1px solid rgb(0 0 0 / 10%);
-  padding: 1rem;
-  background-color: #eeeeee; /* Light clean grey background */
-  color: #111111; /* Sharp charcoal text */
-}
-
-/* Style the list inside the box to look clean */
-ul.box {
-  list-style-type: none; /* Removes bullets */
-  text-align: left; /* Aligns links nicely */
-}
-
-ul.box li {
-  margin: 5px 0;
-}
-
-ul.box li a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-ul.box li a:hover {
-  text-decoration: underline;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666666;
+    background-color: #f8f9fa;
 }
