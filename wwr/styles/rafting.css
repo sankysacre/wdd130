@@ -1,29 +1,27 @@
-/* Color Scheme Variables & Font Definitions */
-:root {
-  --primary-color: #0077b6;     /* Clear river blue */
-  --secondary-color: #2a9d8f;   /* Deep water green */
-  --accent1-color: #1d3557;     /* Solid Navy Blue */
-  --accent2-color: #f1faee;     /* Off-white background tint */
-  --heading-font: "Times New Roman", "Georgia", serif;
-  --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* Universal Layout Reset */
+/* Universal Selector Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CSS Variables defined in :root */
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #2a9d8f;
+  --accent1-color: #1d3557;
+  --accent2-color: #f1faee;
+}
+
 body {
-  font-family: var(--body-font);
+  font-family: Arial, sans-serif;
   color: var(--accent1-color);
   background-color: var(--accent2-color);
 }
 
-/* Page Layout Wrapper */
+/* Document Container Centering */
 header, main, footer {
-  width: 840px;
+  max-width: 840px;
   margin: 0 auto;
   background-color: #ffffff;
 }
@@ -40,36 +38,18 @@ header img {
   width: auto;
 }
 
-/* Global Navigation Menu */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
+header nav a {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
+  margin: 0 10px;
 }
 
-nav ul li a:hover {
+header nav a:hover {
   color: var(--secondary-color);
 }
 
-/* Headings Base Styling */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-/* Spacing Standards */
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-/* Hero Section with Relative Overlay Positioning */
+/* Hero Relative Layout */
 .hero {
   position: relative;
 }
@@ -80,46 +60,49 @@ nav, p, section, article {
   height: auto;
 }
 
-/* absolute positioning on top of the hero photo */
+/* Absolute Positioning Overlays */
 h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: rgba(29, 53, 87, 0.75); /* Navy with opacity transparency */
+  background-color: rgba(29, 53, 87, 0.75);
   color: #ffffff;
 }
 
-/* absolute positioning for the overlay description block */
 .hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
   right: 20px;
   background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(0,0,0,0.1);
   padding: 15px;
 }
 
+/* Float Image Layout */
 .hero article img {
   float: right;
   width: 125px;
   margin-left: 15px;
-  border-radius: 4px;
 }
 
-/* History & Promo Sections */
+/* Sections Styling */
+section {
+  padding: 20px;
+}
+
 section h2 {
+  color: var(--primary-color);
   border-bottom: 2px solid var(--secondary-color);
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
 
-/* Footer Section Layout */
+/* Footer & Social Media Layout */
 footer {
   border-top: 3px solid var(--accent1-color);
-  padding: 20px 16px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
