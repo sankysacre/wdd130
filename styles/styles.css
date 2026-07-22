@@ -12,8 +12,8 @@ body {
 }
 
 /* Centered Page Wrapper Simulation */
-header, main, footer {
-    max-width: 640px;
+header, .grid, footer {
+    max-width: 840px;
     margin: 20px auto;
     background-color: #ffffff;
     border: 1px solid #dddddd;
@@ -21,23 +21,34 @@ header, main, footer {
     padding: 20px;
 }
 
-/* Header Navigation Styling */
+/* Header & Flex Navigation Styling */
 header {
     background-color: #333333;
-    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header nav a {
     color: #ffffff;
     text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
-    display: inline-block;
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
 header nav a:hover {
     color: #0077b6;
+}
+
+/* CSS Grid Layout for Main Content & Aside */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
 }
 
 /* Main Content Layout */
@@ -61,7 +72,7 @@ main p {
     text-align: justify;
 }
 
-/* Lists and Aside Containers */
+/* Lists and Box Containers */
 .box {
     background-color: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -95,6 +106,9 @@ aside h2 {
 aside img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 4px;
 }
 
 /* Footer Section styling */
